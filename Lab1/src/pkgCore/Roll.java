@@ -9,10 +9,14 @@ public class Roll {
 	public Roll() {
 		d1 = new Die();
 		d2 = new Die();
+		setScore();
+	}
+
+	private void setScore() {
+		Score = d1.getDieValue() + d2.getDieValue();
 	}
 
 	public int getScore() {
-		Score = d1.getDieValue() + d2.getDieValue();
 		return Score;
 	}
 
